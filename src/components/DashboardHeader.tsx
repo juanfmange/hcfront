@@ -36,9 +36,9 @@ export const DashboardHeader = ({
     return (
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
             <div>
-                <h1 className="text-4xl font-bold mb-2">Service Health Monitor</h1>
+                <h1 className="text-4xl font-bold mb-2">Monitor de Salud de Servicios DCD </h1>
                 <p className="text-muted-foreground">
-                    Monitor the status of your services in real-time
+                    Monitoriza el estado de los servicios del area DCD en tiempo real
                 </p>
             </div>
 
@@ -72,7 +72,7 @@ export const DashboardHeader = ({
                                 <Label htmlFor="backend-url">Backend URL</Label>
                                 <Input
                                     id="backend-url"
-                                    placeholder="http://localhost:8080/healthcheck"
+                                    placeholder="http://localhost:8081/health"
                                     value={tempUrl}
                                     onChange={(e) => setTempUrl(e.target.value)}
                                 />
