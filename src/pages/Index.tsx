@@ -9,8 +9,12 @@ const Index = () => {
   const { toast } = useToast();
   const [services, setServices] = useState<ServiceStatus[]>([]);
   const [isRefreshing, setIsRefreshing] = useState(false);
+  // localStorage.getItem("backendUrl") || "http://localhost:3000/health" //process.env.VITE_BACKEND_URL"http://localhost:3000/health"
+
   const [backendUrl, setBackendUrl] = useState(
-    localStorage.getItem("backendUrl") || "https://73a74b047aeb.ngrok-free.app/health"
+    localStorage.getItem("backendUrl") || 
+    import.meta.env.VITE_BACKEND_URL || 
+    "http://localhost:3000/health"
   );
 
   const fetchHealthStatus = async () => {
