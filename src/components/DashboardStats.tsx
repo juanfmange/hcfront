@@ -20,7 +20,7 @@ export const DashboardStats = ({ services }: DashboardStatsProps) => {
 
     const stats = [
         {
-            label: "Total Services",
+            label: "Total de Servicios",
             value: total,
             icon: Server,
             color: "text-primary",
@@ -41,7 +41,7 @@ export const DashboardStats = ({ services }: DashboardStatsProps) => {
             bgColor: "bg-destructive/10"
         },
         {
-            label: "Avg Response",
+            label: "Promedio de Respuesta",
             value: `${avgResponseTime}ms`,
             icon: Activity,
             color: "text-warning",
